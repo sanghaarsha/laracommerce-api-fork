@@ -30,6 +30,7 @@ class LandingPageController extends Controller
             'products' => $products
         ];
 
+        // dd($resource);
         return $this->wrapResponse(Response::HTTP_OK, 'Success', $resource);
     }
 
@@ -59,6 +60,7 @@ class LandingPageController extends Controller
             }
         }
 
+        // dd($result);
         return response()->json($result, $code);
     }
 }

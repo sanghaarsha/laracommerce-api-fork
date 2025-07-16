@@ -86,7 +86,7 @@ class Product extends Model
     }
 
     /**
-     * Get the route key for the model.
+     * Overwrite route model binding to use slug instead of id.
      *
      * @return string
      */

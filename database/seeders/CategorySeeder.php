@@ -25,8 +25,6 @@ class CategorySeeder extends Seeder
             ['name' => 'Sports', 'created_by' => getUserWithRole('employee')->id],
             ['name' => 'Beauty', 'created_by' => getUserWithRole('employee')->id],
             ['name' => 'Automotive', 'created_by' => getUserWithRole('employee')->id],
-            ['name' => 'Toys', 'created_by' => getUserWithRole('employee')->id],
-            ['name' => 'Food', 'created_by' => getUserWithRole('employee')->id],
         ];
 
         foreach ($categories as $category) {

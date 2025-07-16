@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('name', 90);
             $table->string('username', 35)->unique()->index();
             $table->string('email')->unique()->index();
-            $table->string('phone', 13)->unique();
+            $table->string('phone', 10)->unique();
             $table->string('nik', 16)->nullable()->unique();
             $table->string('role', 15);
             $table->unsignedBigInteger('balance')->nullable();
