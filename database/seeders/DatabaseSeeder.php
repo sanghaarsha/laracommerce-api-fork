@@ -6,11 +6,10 @@ namespace Database\Seeders;
 
 use App\Models\City;
 use App\Models\Finance;
-use App\Models\User;
-use App\Models\Province;
-use App\Models\ProductImage;
 use App\Models\MerchantAccount;
 use App\Models\Product;
+use App\Models\Province;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -30,8 +29,9 @@ class DatabaseSeeder extends Seeder
         //     ->for($province)
         //     ->create();
 
-        foreach (['ADMIN', 'STAFF', 'MERCHANT'] as $role)
+        foreach (['ADMIN', 'STAFF', 'MERCHANT'] as $role) {
             $user[strtolower($role)] = User::factory()->create(['role' => $role]);
+        }
 
         $this->call([
             CategorySeeder::class,
@@ -44,7 +44,7 @@ class DatabaseSeeder extends Seeder
             ->create();
 
         Product::factory()
-            ->count(5)
+            ->count(50)
             ->for($merchantAccount)
             ->hasProductImages(1)
             ->create();

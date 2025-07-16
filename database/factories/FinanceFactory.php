@@ -20,12 +20,12 @@ class FinanceFactory extends Factory
         return [
             'user_id' => User::factory(),
             'type' => fake()->randomElement(['DEBIT', 'KREDIT']),
-            'order_id' => 'test-' . rand(111, 999),
+            'order_id' => 'test-'.rand(111, 999),
             'description' => fake()->sentences(3, true),
             'amount' => rand(100000, 999000),
-            'status' => fake()->randomElement(['PENDING', 'SUCCESS', 'FAILED', 'ACCEPT', 'REJECT']),
+            'status' => fake()->randomElement(['PENDING', 'SUCCESS', 'ACCEPT', 'REJECT']),
             'balance' => rand(1000000, 5000000),
-            'updated_by' => null
+            'updated_by' => null,
         ];
     }
 }

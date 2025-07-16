@@ -3,8 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
-use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class CategorySeeder extends Seeder
@@ -19,10 +17,20 @@ class CategorySeeder extends Seeder
         $categories = [
             ['name' => 'Gadget', 'created_by' => getUserWithRole('employee')->id],
             ['name' => 'Furniture', 'created_by' => getUserWithRole('employee')->id],
-            ['name' => 'Sneaker', 'created_by' => getUserWithRole('employee')->id]
+            ['name' => 'Sneaker', 'created_by' => getUserWithRole('employee')->id],
+            ['name' => 'Electronics', 'created_by' => getUserWithRole('employee')->id],
+            ['name' => 'Fashion', 'created_by' => getUserWithRole('employee')->id],
+            ['name' => 'Home Appliances', 'created_by' => getUserWithRole('employee')->id],
+            ['name' => 'Books', 'created_by' => getUserWithRole('employee')->id],
+            ['name' => 'Sports', 'created_by' => getUserWithRole('employee')->id],
+            ['name' => 'Beauty', 'created_by' => getUserWithRole('employee')->id],
+            ['name' => 'Automotive', 'created_by' => getUserWithRole('employee')->id],
+            ['name' => 'Toys', 'created_by' => getUserWithRole('employee')->id],
+            ['name' => 'Food', 'created_by' => getUserWithRole('employee')->id],
         ];
 
-        foreach ($categories as $category)
+        foreach ($categories as $category) {
             Category::create($category);
+        }
     }
 }
